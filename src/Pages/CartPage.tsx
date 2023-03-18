@@ -189,7 +189,10 @@ const CategoryBox = styled.div`
 
 const CartBoxSumBox = styled.div`
   display: flex;
+  width: 72%;
+  justify-content: space-between;
   @media (max-width: 1025px) {
+    width: 100%;
     flex-direction: column;
   }
 `;
