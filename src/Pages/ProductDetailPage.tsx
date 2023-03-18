@@ -165,6 +165,9 @@ const ProductSection = styled.section`
   display: flex;
   margin-top: 3.5rem;
   width: 69%;
+  @media (max-width: 1025px) {
+    flex-direction: column;
+  }
 `;
 
 const ProductImgBox = styled.div`
