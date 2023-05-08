@@ -2,12 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ProductListProps } from "../Main/MainPage";
+import { scrollToTop } from "../Utils/scrollToTop";
 
 interface themeProps {
   theme: string;
 }
 
 export default function NullPage({ theme }: themeProps) {
+  scrollToTop();
   return (
     <Section theme={theme}>
       <SectionTitle>404</SectionTitle>

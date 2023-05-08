@@ -15,7 +15,6 @@ export interface ProductListThemProps {
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("THEME") || "light");
-  // console.log(theme);
 
   const changeTheme = () => {
     if (theme === "light") {

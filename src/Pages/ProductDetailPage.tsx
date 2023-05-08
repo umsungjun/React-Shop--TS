@@ -7,10 +7,11 @@ import { increment } from "../Store/cartCountSlice";
 import { HiChevronRight } from "react-icons/hi";
 import { starRating } from "../Utils/starRating";
 import { TbCurrencyDollar } from "react-icons/tb";
+import { scrollToTop } from "../Utils/scrollToTop";
 
 export default function ProductDetailPage(props: ProductListProps) {
   const { id } = useParams();
-
+  scrollToTop();
   const dispatch = useDispatch();
 
   // const [productCount, setProductCount] = useState(0);

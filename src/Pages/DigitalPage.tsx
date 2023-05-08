@@ -4,10 +4,11 @@ import styled from "styled-components";
 import { ProductListProps } from "../Main/MainPage";
 
 import { HiChevronRight } from "react-icons/hi";
+import { scrollToTop } from "../Utils/scrollToTop";
 
 export default function DigitalPage({ productList, theme }: ProductListProps) {
   // console.log(props.productList);
-
+  scrollToTop();
   if (productList.length < 1) {
     return (
       <SetionContainer theme={theme}>

@@ -7,8 +7,10 @@ import { decrement, increment, reset } from "../Store/cartCountSlice";
 import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import PaymentModal from "../Common/PaymentModal";
+import { scrollToTop } from "../Utils/scrollToTop";
 
 export default function CartPage(props: ProductListProps) {
+  scrollToTop();
   const dispatch = useDispatch();
 
   const cartItems = localStorage.getItem("CART_ITEM");
