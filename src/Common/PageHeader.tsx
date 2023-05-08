@@ -21,7 +21,6 @@ export default function PageHeader({
   productList,
 }: themProps) {
   const count = useSelector((state: RootState) => state.counter.value);
-  // console.log(productList);
 
   const [search, setSerch] = useState("");
   const searchRef = useRef<HTMLInputElement>(null);
