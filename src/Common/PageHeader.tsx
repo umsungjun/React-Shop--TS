@@ -22,12 +22,11 @@ export default function PageHeader({
 }: themProps) {
   const count = useSelector((state: RootState) => state.counter.value);
 
-  const [search, setSerch] = useState("");
+  const [search, setSearch] = useState("");
   const searchRef = useRef<HTMLInputElement>(null);
 
-  const handleSearchbar = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value); // 값 잘 넘어옴
-    setSerch(e.target.value);
+  const handleSearchbox = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
   };
 
   const filterProduct = (search: string) => {
@@ -40,7 +39,7 @@ export default function PageHeader({
     if (searchRef.current) {
       searchRef.current.value = "";
     }
-    setSerch("");
+    setSearch("");
   };
 
   const [show, setShow] = useState("off");
@@ -61,7 +60,7 @@ export default function PageHeader({
   return (
     <HeaderContainer theme={theme}>
       <SideBar show={show} theme={theme} onClick={handleSideBarOff}></SideBar>
-      <SideBarWapper show={show} theme={theme}>
+      <SideBarWarper show={show} theme={theme}>
         <SideBarLink theme={theme} to="/fashion" onClick={handleSideBarOff}>
           패션
         </SideBarLink>
@@ -71,11 +70,11 @@ export default function PageHeader({
         <SideBarLink theme={theme} to="/digital" onClick={handleSideBarOff}>
           디지털
         </SideBarLink>
-      </SideBarWapper>
-      <HeaderWraper>
-        <HambergerLabel theme={theme} onClick={handleSideBar}>
+      </SideBarWarper>
+      <HeaderWarper>
+        <HamburgerLabel theme={theme} onClick={handleSideBar}>
           <RxHamburgerMenu />
-        </HambergerLabel>
+        </HamburgerLabel>
         <LogoLink theme={theme} to="/">
           React Shop
         </LogoLink>
@@ -103,7 +102,7 @@ export default function PageHeader({
             theme={theme}
             type="text"
             placeholder="검색"
-            onChange={handleSearchbar}
+            onChange={handleSearchbox}
             ref={searchRef}
           />
           <SearchUl theme={theme}>
@@ -124,7 +123,7 @@ export default function PageHeader({
             <BasketCount>{count}</BasketCount>
           </BasketBox>
         </HeaderRightBox>
-      </HeaderWraper>
+      </HeaderWarper>
     </HeaderContainer>
   );
 }
@@ -155,13 +154,13 @@ const SideBar = styled.div<showTheme>`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vh;
+  width: 100%;
   height: 100vh;
   background: ${(props) => (props.theme === "light" ? "#acaeb3" : "#20252e")};
   opacity: 0.5;
 `;
 
-const SideBarWapper = styled.ul<showTheme>`
+const SideBarWarper = styled.ul<showTheme>`
   display: ${(props) => (props.show === "on" ? "flex" : "none")};
   flex-direction: column;
   padding: 2rem;
@@ -189,7 +188,7 @@ const SideBarLink = styled(Link)`
   }
 `;
 
-const HeaderWraper = styled.div`
+const HeaderWarper = styled.div`
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -197,7 +196,7 @@ const HeaderWraper = styled.div`
   height: 100%;
 `;
 
-const HambergerLabel = styled.label`
+const HamburgerLabel = styled.label`
   display: none;
   cursor: pointer;
   margin-right: 10px;
