@@ -1,5 +1,5 @@
 # React-Shop--TS
 
-리액트 타입스크립트를 이용해서 구현한 쇼핑몰 입니다.
+프로젝트 소개
 
-- https://react-shop-ts-hazel.vercel.app/
+# https://thread-eyelash-4dc.notion.site/ReactShop-9cbb95f08f4c4d9386f3b2b7a7baa29f
