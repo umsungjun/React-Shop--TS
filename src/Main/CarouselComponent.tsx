@@ -10,7 +10,7 @@ import carousel2 from "../assets/carouselImg/carousel2.jpeg";
 import carousel3 from "../assets/carouselImg/carousel3.jpeg";
 import { ProductListProps } from "./MainPage";
 
-export default function CarouselCompnent({ theme }: ProductListProps) {
+export default function CarouselComponent({ theme }: ProductListProps) {
   return (
     <Carousel
       showArrows={true}

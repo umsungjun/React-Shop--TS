@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ProductListResponseType } from "../Service/productService";
-import CarouselCompnent from "./CarouselCompnent";
+import CarouselComponent from "./CarouselComponent";
 import MainAccessorySection from "./MainAccessorySection";
 import MainDigitalSection from "./MainDigitalSection";
 import MainFashionSection from "./MainFashionSection";
@@ -14,7 +14,7 @@ export interface ProductListProps {
 export default function MainPage(props: ProductListProps) {
   return (
     <MainContainer theme={props.theme}>
-      <CarouselCompnent theme={props.theme} productList={props.productList} />
+      <CarouselComponent theme={props.theme} productList={props.productList} />
       <MainFashionSection productList={props.productList} theme={props.theme} />
       <MainAccessorySection
         productList={props.productList}
