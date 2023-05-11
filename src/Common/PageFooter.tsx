@@ -15,7 +15,7 @@ export default function PageFooter({ theme }: PageFooterProps) {
 
   return (
     <Footer theme={theme}>
-      <Link href="https://zero-base.co.kr/">제로베이스</Link>
+      <Link href="https://developer-sungjun.tistory.com/">엄성준 블로그</Link>
       <CardLogoBox>
         <svg
           viewBox="0 0 38 24"
@@ -227,7 +227,7 @@ export default function PageFooter({ theme }: PageFooterProps) {
           <AiFillGithub />
         </LinkBoxLinkG>
       </LinkBox>
-      <FooterMent>Copyright © 2022 Zero Base</FooterMent>
+      <FooterMent>2023 Um sung jun</FooterMent>
     </Footer>
   );
 }
