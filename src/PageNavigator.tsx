@@ -8,7 +8,6 @@ import FashionPage from "./Pages/FashionPage";
 import NullPage from "./Pages/NullPage";
 import ProductDetailPage from "./Pages/ProductDetailPage";
 
-// 모든 정보를 뿌려줄 수 있는 곳에서 fetch
 export default function PageNavigator({
   theme,
   productList,
