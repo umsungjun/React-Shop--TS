@@ -182,6 +182,9 @@ const ProductImgBox = styled.div`
 `;
 
 const ProductImg = styled.img`
+  @media (max-width: 576px) {
+    width: 80%;
+  }
   height: 18rem;
 `;
 
