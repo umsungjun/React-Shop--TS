@@ -68,7 +68,7 @@ export default function ProductDetailPage(props: ProductListProps) {
   const categoryChange = (category: string) => {
     if (category.includes("clothing")) {
       return "패션";
-    } else if (category === "jewelery") {
+    } else if (category === "jewelry") {
       return "액세서리";
     } else {
       return "디지털";
@@ -79,7 +79,7 @@ export default function ProductDetailPage(props: ProductListProps) {
   if (props.productList.length < 1) {
     return (
       <Section theme={props.theme}>
-        <ScheletonBox theme={props.theme}>상품정보가 없습니다.</ScheletonBox>
+        <SkeletonBox theme={props.theme}>상품정보가 없습니다.</SkeletonBox>
       </Section>
     );
   }
@@ -272,7 +272,7 @@ const GoCartButton = styled(Link)`
     props.theme === "light" ? "1px solid black" : "1px solid #a6adba"};
 `;
 
-const ScheletonBox = styled.div`
+const SkeletonBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
